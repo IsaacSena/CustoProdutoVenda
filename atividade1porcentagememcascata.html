@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 1</h1>
+    <p>Nome do Produto:<span id="nomeproduto"></span></p>
+    <p>Custo de Fabricação:<span id="custofabricacao"></span></p>
+    <p>Imposto:<span id="taxaimposto"></span></p>
+    <p>Imposto do Distribuidor: <span id="impostodistribuidor"></span></p>
+    <p>Preço Final:R$<span id="precofinal"></span></p>
+
+    <script>
+        let nomedoproduto
+        let custodefabricacao
+        let impostodovendededor
+        let impostododistribuidor
+        let imposto1
+        let imposto2
+        let valorcomimposto
+        let precofinal
+
+        nomedoproduto = prompt("Digite o nome do produto")
+        custodefabricacao = Number(prompt("Digite o valor do custo de fabricação"))
+        impostodovendededor = Number(prompt("Digite o valor do imposto"))
+        impostododistribuidor = Number(prompt("Digite o valor do imposto do distribuidor"))
+        
+        imposto1 = (impostodovendededor / 100) * custodefabricacao;
+        valorcomimposto = custodefabricacao + imposto1;
+
+        imposto2 = (impostododistribuidor / 100) * valorcomimposto
+        precofinal = valorcomimposto + imposto2;
+
+
+        console.log(precofinal)
+        document.getElementById("nomeproduto").innerHTML = nomedoproduto
+        document.getElementById("custofabricacao").innerHTML = custodefabricacao.toFixed(2);
+        document.getElementById("taxaimposto").innerHTML = impostodovendededor.toFixed(2) + "%";
+        document.getElementById("impostodistribuidor").innerHTML = impostododistribuidor.toFixed(2) + "%";
+        document.getElementById("precofinal").innerHTML = precofinal.toFixed(2);
+
+    </script>
+</body>
+</html>

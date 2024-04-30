@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade </title>
+</head>
+<body>
+    <p>Nome do cliente:<span id="nomecliente"></span></p>
+    <p>Quantidade de Hot-Dog:<span id="hotdog"></span></p>
+    <p>Quantidade de Hambúrguer:<span id="hamburguer"></span></p>
+    <p>Quantidade de Cheeseburguer:<span id="cheeseburguer"></span></p>
+    <p>Refrigerante de Lata:<span id="refrigerantelata"></span></p>
+    <p>Batatas Fritas:<span id="batatafrita"></span></p>
+    <p>Preço Final:R$<span id="precofinal"></span></p>
+ 
+    <script>
+        let nomedocliente
+        let quantidadehotdog
+        let quantidadehambuerguer
+        let quantidadecheeseburguer
+        let quantidaderefrigerantelata
+        let batatasfritas
+        let resultado
+ 
+        nomedocliente = prompt("Digite o nome do cliente")
+        quantidadehotdog = Number(prompt("Digite a quantidade de Hot-Dog"))
+        quantidadehambuerguer = Number(prompt("Digite a quantidade de Hambúrgueres"))
+        quantidadecheeseburguer = Number(prompt("Digite a quantidade de cheesebúrguers"))
+        quantidaderefrigerantelata = Number(prompt("Digite a quantidade de Refrigerantes"))
+        batatasfritas = Number(prompt("Digite a quantidade de Batatas Fritas"))
+ 
+        resultado = (quantidadehotdog * 1) + (quantidadehambuerguer * 1.30) + (quantidadecheeseburguer * 1.50) + (quantidaderefrigerantelata * 1) + (batatasfritas * 0.80)
+ 
+        console.log(precofinal)
+        document.getElementById("nomecliente").innerHTML = nomedocliente
+        document.getElementById("hotdog").innerHTML = quantidadehotdog
+        document.getElementById("hamburguer").innerHTML = quantidadehambuerguer
+        document.getElementById("cheeseburguer").innerHTML = quantidadecheeseburguer
+        document.getElementById("refrigerantelata").innerHTML = quantidaderefrigerantelata
+        document.getElementById("batatafrita").innerHTML = batatasfritas
+        document.getElementById("precofinal").innerHTML = resultado
+   
+ 
+    </script>
+    
+</body>
+</html>
